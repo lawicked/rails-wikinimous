@@ -1,0 +1,12 @@
+<h2><%= @article.title %></h2>
+<%= link_to "Wikinimous", articles_path %>
+
+<br>
+
+<p><%= @article.content %></p>
+<%= link_to "Update Article", article_edit_path %>
+
+<%= link_to "Delete",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
